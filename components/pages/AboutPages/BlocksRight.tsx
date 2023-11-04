@@ -3,7 +3,7 @@ import styles from '@/app/global.module.scss';
 
 const BlockR = () => (
 
-	<div className={styles.block_divright}>
+	<div className={styles.block2}>
 		<div className={styles.divr}>
 			<h1>ff</h1>
 		</div>
@@ -13,7 +13,6 @@ const BlockR = () => (
 		<div className={styles.div2}>
 			<h1>2</h1>
 		</div>
-
 	</div>
 );
 export {BlockR};

@@ -1,10 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 /* eslint-disable react/react-in-jsx-scope */
 
 import styles from '@/app/global.module.scss';
 import {Video} from '@/components/Video';
 import Image from 'next/image';
-import blures from '@/assets/img/blures1.svg';
+import blures from '@/assets/img/blures.png';
 import {BlockL} from '@/components/pages/AboutPages/BlocksLeft';
 import {BlockR} from '@/components/pages/AboutPages/BlocksRight';
 
@@ -15,11 +15,9 @@ const AboutPage = () => {
 		<div className={styles.main}>
 			<Video url={props}/>
 			<Image src={blures} alt='b' className={styles.blures}/>
-			<div className={styles.block1}>
-
-				<BlockL/>
-				<BlockR/>
-			</div>
+			<BlockL/>
+			<BlockR/>
+			<Image src={blures} alt='b' className={styles.blures2}/>
 		</div>
 	);
 };

@@ -2,7 +2,8 @@
 import styles from '@/app/global.module.scss';
 
 const BlockL = () => (
-	<div className={styles.block_divleft}>
+	<div className={styles.block1}>
+
 		<div className={styles.div}>
 			<h1>1</h1>
 		</div>
@@ -12,6 +13,7 @@ const BlockL = () => (
 		<div className={styles.divl}>
 			<h1>ff</h1>
 		</div>
+
 	</div>
 );
 export {BlockL};
