@@ -8,14 +8,14 @@ import styles from '@/app/global.module.scss';
 import Home from '@/assets/img/Home.svg';
 import Blog from '@/assets/img/Blog.svg';
 import Portfolio from '@/assets/img/Portfolio.svg';
-import Resume from '@/assets/img/Resume.svg';
+import Authors from '@/assets/img/Authors.svg';
 import About from '@/assets/img/About.svg';
 import Logo from '@/assets/img/Logo.svg';
 const Header = () => {
 	const NavItem: NavLink[] = [
 		{icon: Home, label: 'Home', href: '/', id: 1},
 		{icon: Portfolio, label: 'Portfolio', href: '/portfolio', id: 2},
-		{icon: Resume, label: 'Resume', href: '/resume', id: 3},
+		{icon: Authors, label: 'Authors', href: '/authors', id: 3},
 		{icon: Blog, label: 'Blog', href: '/blog', id: 4},
 		{icon: About, label: 'About', href: '/about', id: 5},
 	];

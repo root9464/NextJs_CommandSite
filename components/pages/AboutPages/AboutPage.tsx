@@ -1,19 +1,16 @@
+/* eslint-disable arrow-body-style */
 
 /* eslint-disable react/react-in-jsx-scope */
-
 import styles from '@/app/global.module.scss';
-import {Video} from '@/components/Video';
 import Image from 'next/image';
 import blures from '@/assets/img/blures.png';
 import {BlockL} from '@/components/pages/AboutPages/BlocksLeft';
 import {BlockR} from '@/components/pages/AboutPages/BlocksRight';
-
+import Background from '@/assets/img/backgrounds/About.jpeg';
 const AboutPage = () => {
-	const props = 'https://cdn.coverr.co/videos/coverr-water-droplets-on-a-branch-7524/1080p.mp4';
-
 	return (
 		<div className={styles.main}>
-			<Video url={props}/>
+			<Image className={styles.bcimage} src={Background} alt='f'/>
 			<Image src={blures} alt='b' className={styles.blures}/>
 			<BlockL/>
 			<BlockR/>
