@@ -9,6 +9,29 @@ $ux-element2: #F5F5F7;
 $color-bg: #2C2C32;
 $color-text: #EEEEEE;
 $color-active: #b88cf1;
+$color-text: rgb(0, 0, 0);
+
+@mixin background-pages{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    margin: 0%;
+    top: 0px;
+    left: 0;
+    height: 101vh;
+}
+
+@mixin blockes{
+    z-index: 10;
+    top: 101vh;
+    width: 100%;
+    height: 275vh;
+    padding-top: 70px;
+}
+
+
 
 .header{
     z-index: 10;
@@ -31,20 +54,18 @@ $color-active: #b88cf1;
     padding-right: 158px;
     font-size: 20px;
     z-index: 10;
-    .ico{
-        position: relative;
-        top: 3px;
-        width: 19px;
-        height: 19px;
-    }
+    
     .block{
-        color: white;
         text-decoration: none;
         padding: 0 1rem;
-        a {
-            color: white;
-            text-decoration: none;
-            padding: 0 1rem;
+        .ico{
+            position: relative;
+            top: 3px;
+            width: 19px;
+            height: 19px;
+        }
+        a{
+            margin-left: 12px;
             &:hover{
                 text-decoration: underline;
             }
@@ -56,11 +77,11 @@ $color-active: #b88cf1;
         margin-right: 120px;
       }
 }
-.Active {
+
+.active {
     color: $color-active;
     cursor: default;
-}
-
+  }
 
 .main{
     z-index: 5;
@@ -70,15 +91,7 @@ $color-active: #b88cf1;
     width: 100%;
     height: 100vh;
     .video, .bcimage{
-        position: absolute;
-        width: 100%;
-        object-fit: cover;
-        background-size: cover;
-        background-position: center;
-        margin: 0%;
-        top: 0px;
-        left: 0;
-        height: 101vh;
+        @include background-pages
     }
     .title{
         position: absolute;
@@ -102,12 +115,8 @@ $color-active: #b88cf1;
 }
 
 .block1{
-    z-index: 10;
+    @include blockes;
     position: relative;
-    top: 101vh;
-    width: 100%;
-    height: 100vh;
-    padding-top: 30px;
     .div{
         display: flex;
         justify-content: center;
@@ -136,12 +145,9 @@ $color-active: #b88cf1;
     }
 }
 .block2{
-    z-index: 10;
+    @include blockes;
     position: absolute;
-    top: 101vh;
-    width: 100%;
-    height: 100vh;
-    padding-top: 30px;
+
     .div2{
         display: flex;
         margin-right: 30px;
@@ -184,6 +190,78 @@ $color-active: #b88cf1;
     top: 145vh;
     left: 660px;
     width: 1886.72px;
-    height: 1486.52px;
+    height: 1286.52px;
     z-index: 1;
+}
+
+.block3{
+    background-color: rgba(255, 0, 0, 0.274);
+    position: relative;
+    @include blockes;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(428px - 150px *2);
+    .bcauthor{
+        margin-bottom: calc(274px + 150px);
+        background-color: blue;
+        position: relative;
+        margin-left: 150px;
+        border-radius: 50px;
+        width: 463px;
+        height: 463px;
+        .author{
+            background-color: greenyellow;
+            left: 100px;
+            top: 100px;
+            border-radius: 50px;
+            position: absolute;
+            width: 463px;
+            height: 464px;
+            margin-right: 65px;
+        }
+        .titleauthor{
+            color:$color-text ;
+            display: flex;
+            font-size: 40px;
+            align-items: center;
+            justify-content: center;
+            background-color: $ux-element2;
+            position: relative;
+            width: 563px;
+            height: 150px;
+            top: calc(564px + 151px);
+            border-radius: 40px;
+        }
+    }
+}
+
+.block4{
+    background-color: rgba(255, 0, 0, 0.274);
+    position: relative;
+    @include blockes;
+    display: flex;
+    justify-content: center;
+    .h{
+        background: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6BFEA 96.42%);
+        position: absolute;
+        border-radius: 50px;
+        width: calc(100vw *0.9);
+        height: 150px;
+    }
+    .pos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        .requirements{
+            position: relative;
+            background-color: blue;
+            margin-left: 112px;
+            right: 56px;
+            top: calc(150px + 70px);
+            width: calc(100vw *0.42);
+            height: 401px;
+            border-radius: 50px;
+        }
+    }
+    
 }

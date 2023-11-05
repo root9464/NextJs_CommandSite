@@ -5,7 +5,6 @@ import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import './globals.scss';
 import styles from '@/app/global.module.scss';
-import {Header} from '@/components/Header';
 const studioPro = localFont({
 	src: [
 		{
@@ -30,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={studioPro.variable}>
-				<Header/>
+
 				<main>
 					{children}
 				</main>
