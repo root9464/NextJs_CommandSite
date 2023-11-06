@@ -10,6 +10,8 @@ $color-bg: #2C2C32;
 $color-text: #EEEEEE;
 $color-active: #b88cf1;
 $color-text: rgb(0, 0, 0);
+$color-bcui: #1C1C1C;
+$color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6BFEA 96.42%);
 
 @mixin background-pages{
     position: absolute;
@@ -23,12 +25,21 @@ $color-text: rgb(0, 0, 0);
     height: 101vh;
 }
 
-@mixin blockes{
+
+@mixin blockes($sizevh: true){
+    $max: calc(191vh + 55px*2);
+    $type2: "true";
     z-index: 10;
     top: 101vh;
     width: 100%;
-    height: 275vh;
     padding-top: 70px;
+
+    @if $sizevh == false {
+        height: auto;
+    }@else{
+        height: $max;
+    }
+
 }
 
 
@@ -115,7 +126,7 @@ $color-text: rgb(0, 0, 0);
 }
 
 .block1{
-    @include blockes;
+    @include blockes(false);
     position: relative;
     .div{
         display: flex;
@@ -145,7 +156,7 @@ $color-text: rgb(0, 0, 0);
     }
 }
 .block2{
-    @include blockes;
+    @include blockes(false);
     position: absolute;
 
     .div2{
@@ -194,13 +205,14 @@ $color-text: rgb(0, 0, 0);
     z-index: 1;
 }
 
-.block3{
+.block3{ //трекер 
     background-color: rgba(255, 0, 0, 0.274);
     position: relative;
-    @include blockes;
+    @include blockes(true);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: calc(428px - 150px *2);
+    // height: 2040px;
     .bcauthor{
         margin-bottom: calc(274px + 150px);
         background-color: blue;
@@ -236,32 +248,100 @@ $color-text: rgb(0, 0, 0);
 }
 
 .block4{
-    background-color: rgba(255, 0, 0, 0.274);
+    $border:50px;
     position: relative;
-    @include blockes;
+    @include blockes(true);
     display: flex;
     justify-content: center;
     .h{
-        background: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6BFEA 96.42%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 64px;
+        color: $color-text;
+        background: $color-gradient-bcui;
         position: absolute;
-        border-radius: 50px;
+        border-radius: $border;
         width: calc(100vw *0.9);
         height: 150px;
     }
-    .pos{
+    .pos2{
+        position: absolute;
         display: grid;
         grid-template-columns: repeat(2,1fr);
-
+        left: 29px;
+        top: calc(70px + 150px + 45px);
         .requirements{
+            z-index: 10;
+            display: flex;
+            font-size: 30px;
+            padding: 30px 40px 20px 40px;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
             position: relative;
-            background-color: blue;
+            background-color: $color-bcui;
             margin-left: 112px;
             right: 56px;
-            top: calc(150px + 70px);
             width: calc(100vw *0.42);
             height: 401px;
-            border-radius: 50px;
+            border-radius: $border;
+            margin-bottom: 112px;
         }
     }
-    
+    .pos{
+        width: 100%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+
+    }
+    .invite{
+        background-color: $color-bcui;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: calc(401px /0.64 - 5.5625px);
+        border-radius: $border;
+        top: calc(70px + 150px + 45px *2 + 98vh);
+        //width: 100%; 1855
+        width: calc(100% *0.7);
+        padding: 30px 40px 20px 40px ;
+        .posbuttons{
+            padding: 20px 30px 10px 0px;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            left: calc(-182px + 40px);
+            width: 50vw;
+            height: 100px;
+        }
+    }
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-gradient-bcui;
+    border-radius: 28px;
+    margin-right: 100px;
+    width: 298px;
+    height: 78px;
+    font-size: 32px;
+}
+.th1{
+    font-size: 50px;
+}
+.tp{
+    font-size: 45px;
+}
+.blures3{
+    position: absolute;
+    top: 10vh;
+    left: 740px;
+    width: 1886.72px;
+    height: 1486.52px;
+    z-index: 1;
 }
