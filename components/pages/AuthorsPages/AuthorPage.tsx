@@ -26,7 +26,7 @@ const AuthorPage = (): JSX.Element => {
 	]);
 
 	return (
-		<div className={styles.main}>
+		<>
 			<Image className={styles.bcimage} src={Background} alt='f'/>
 			<div className={styles.block3}>
 				{authors.map((item: any, id: number) => {
@@ -36,7 +36,7 @@ const AuthorPage = (): JSX.Element => {
 					);
 				})}
 			</div>
-		</div>
+		</>
 	);
 };
 

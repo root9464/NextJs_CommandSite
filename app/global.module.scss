@@ -1,10 +1,9 @@
 
 // glass block style
-
 $ux-element1: linear-gradient(227deg, rgba(255, 242, 242, 0.03) 25.7%, rgba(255, 250, 250, 0.07) 94.73%); //background
 $element1-bluer:blur(64px); //backdrop-filter
 
-//global ux style
+//color ux style
 $ux-element2: #F5F5F7;
 $color-bg: #2C2C32;
 $color-text: #EEEEEE;
@@ -12,6 +11,9 @@ $color-active: #b88cf1;
 $color-text: rgb(0, 0, 0);
 $color-bcui: #1C1C1C;
 $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6BFEA 96.42%);
+
+//statick values
+$margin: 150px;
 
 @mixin background-pages{
     position: absolute;
@@ -58,7 +60,8 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
     background-color: $ux-element1;
     backdrop-filter: $element1-bluer;
 
-    margin-left: 235px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 176px;
     border-radius: 20px;
     padding-left: 158px;
@@ -98,7 +101,6 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
     z-index: 5;
     position:absolute;
     top: 0;
-    background-color:$ux-element2;
     width: 100%;
     height: 100vh;
     .video, .bcimage{
@@ -134,13 +136,14 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
         align-items: center;
         background-color: $ux-element1;
         backdrop-filter: $element1-bluer;
+
         margin-left: 30px;
         position: relative;
         width: 880px;
         height: 535px;
         border-radius: 60px;
         &:nth-child(odd){
-            margin-bottom: 150px;
+            margin-bottom: $margin;
         }
     }
     .divl{
@@ -172,7 +175,7 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
         height: 535px;
         border-radius: 60px;
         &:nth-child(even){
-            margin-bottom: 150px;
+            margin-bottom: $margin;
         }
     }
     .divr{
@@ -211,17 +214,19 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
     @include blockes(true);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: calc(428px - 150px *2);
+    gap: calc(428px - $margin *2);
     // height: 2040px;
     .bcauthor{
-        margin-bottom: calc(274px + 150px);
-        background-color: blue;
+        margin-bottom: calc(274px + $margin);
+        z-index: 10;
+        background: $color-gradient-bcui;
         position: relative;
-        margin-left: 150px;
+        margin-left: $margin;
         border-radius: 50px;
         width: 463px;
         height: 463px;
         .author{
+            z-index: 10;
             background-color: greenyellow;
             left: 100px;
             top: 100px;
@@ -240,7 +245,7 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
             background-color: $ux-element2;
             position: relative;
             width: 563px;
-            height: 150px;
+            height: $margin;
             top: calc(564px + 151px);
             border-radius: 40px;
         }
@@ -263,14 +268,14 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
         position: absolute;
         border-radius: $border;
         width: calc(100vw *0.9);
-        height: 150px;
+        height: $margin;
     }
     .pos2{
         position: absolute;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         left: 29px;
-        top: calc(70px + 150px + 45px);
+        top: calc(70px + $margin + 45px);
         .requirements{
             z-index: 10;
             display: flex;
@@ -283,8 +288,8 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
             background-color: $color-bcui;
             margin-left: 112px;
             right: 56px;
-            width: calc(100vw *0.42);
-            height: 401px;
+            max-width: calc(100vw *0.42);
+            min-height: 401px;
             border-radius: $border;
             margin-bottom: 112px;
         }
@@ -303,11 +308,11 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
         align-items: center;
         justify-content: center;
         position: absolute;
-        height: calc(401px /0.64 - 5.5625px);
+        min-height: calc(401px /0.64 - 5.5625px);
         border-radius: $border;
-        top: calc(70px + 150px + 45px *2 + 98vh);
+        top: calc(70px + $margin + 45px *2 + 98vh);
         //width: 100%; 1855
-        width: calc(100% *0.7);
+        max-width: calc(100% *0.7);
         padding: 30px 40px 20px 40px ;
         .posbuttons{
             padding: 20px 30px 10px 0px;
@@ -344,4 +349,34 @@ $color-gradient-bcui: linear-gradient(263deg, #A38DD1 1.59%, #BF8DD1 33.89%, #F6
     width: 1886.72px;
     height: 1486.52px;
     z-index: 1;
+}
+
+.block5{
+    background-color: $color-bg;
+    z-index: 10;
+    border-radius: 50px;
+    top: 0px;
+    width: calc(100% - $margin *2);
+    margin-left: $margin;
+    margin-top: 75px;
+    height: calc(100% - 75px *2);
+    padding-top: 70px;
+    $border:50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .background{
+        padding-top: 65px;
+        font-size: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: $color-gradient-bcui;
+        position: relative;
+        top: calc(115px + 20px);
+        width: calc(100% - 115px *2);
+        height: calc(100% - $margin *2 + 165px - 50px);
+        border-radius: 20px;
+    }
 }

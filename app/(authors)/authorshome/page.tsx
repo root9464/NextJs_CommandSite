@@ -6,9 +6,9 @@ import {BlockPage} from '@/components/pages/HomeAuthors/BlockPage';
 import Background from '@/assets/img/backgrounds/HomeAuthors.png';
 export default function HomeAuthors() {
 	return (
-		<div className={styles.main}>
+		<section className={styles.main}>
 			<Image className={styles.bcimage} src={Background } alt='f'/>
 			<BlockPage/>
-		</div>
+		</section>
 	);
 }
