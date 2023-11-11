@@ -1,8 +1,7 @@
-/* eslint-disable react/react-in-jsx-scope */
 
 import styles from '@/app/global.module.scss';
 import {Video} from '@/components/Video';
-import {TextEffect, type Props} from '@/components/TextEffect';
+import {TextEffect} from '@/components/TextEffect';
 
 const Main = (): JSX.Element => {
 	const props = 'https://cdn.coverr.co/videos/coverr-raindrops-on-tree-branches-7585/1080p.mp4';

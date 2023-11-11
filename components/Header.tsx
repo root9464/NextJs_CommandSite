@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable react/react-in-jsx-scope */
-
-import Link from 'next/link';
 import Image from 'next/image';
 import {Navigation, type NavLink} from '@/components/Navigation';
 import styles from '@/app/global.module.scss';

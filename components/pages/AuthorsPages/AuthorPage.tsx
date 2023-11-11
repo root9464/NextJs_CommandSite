@@ -1,9 +1,5 @@
-/* eslint-disable arrow-body-style */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
-/* eslint-disable @typescript-eslint/naming-convention */
-
-/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 'use client';
 import styles from '@/app/global.module.scss';
@@ -11,7 +7,6 @@ import Image from 'next/image';
 import Background from '@/assets/img/backgrounds/Authors.jpeg';
 import {Author} from './Author';
 import {useState} from 'react';
-import Link from 'next/link';
 export type author = {
 	id: number;
 	stack?: string;

@@ -1,7 +1,3 @@
-/* eslint-disable key-spacing */
-
-/* eslint-disable react/react-in-jsx-scope */
-
 import {type Metadata} from 'next';
 import styles from '@/app/global.module.scss';
 

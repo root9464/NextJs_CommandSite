@@ -1,12 +1,8 @@
 
-/* eslint-disable arrow-body-style */
-/* eslint-disable @typescript-eslint/keyword-spacing */
-/* eslint-disable react/react-in-jsx-scope */
-
 import styles from '@/app/global.module.scss';
 
 const BlockR = () => {
-	return(
+	return (
 		<div className={styles.block2}>
 			<div className={styles.divr}>
 				<h1>ff</h1>

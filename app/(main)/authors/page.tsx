@@ -1,5 +1,3 @@
-// About component
-/* eslint-disable react/react-in-jsx-scope */
 
 import {AuthorPage} from '@/components/pages/AuthorsPages/AuthorPage';
 import styles from '@/app/global.module.scss';

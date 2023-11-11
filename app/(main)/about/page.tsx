@@ -1,5 +1,3 @@
-// About component
-/* eslint-disable react/react-in-jsx-scope */
 
 import {type Metadata} from 'next';
 import {AboutPage} from '@/components/pages/AboutPages/AboutPage';

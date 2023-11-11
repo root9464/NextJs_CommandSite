@@ -1,13 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable react/react-in-jsx-scope */
 
-import Link from 'next/link';
 import Image from 'next/image';
 import {Navigation, type NavLink} from '@/components/Navigation';
 import styles from '@/app/global.module.scss';
 import Home from '@/assets/img/Home.svg';
 import Member from '@/assets/img/Member.svg';
-import Invite from '@/assets/img/Invite.svg';
 import Logo from '@/assets/img/Logo.svg';
 import Next from '@/assets/img/Next.svg';
 const HeaderA = () => {

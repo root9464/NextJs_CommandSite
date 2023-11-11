@@ -1,10 +1,7 @@
 
-/* eslint-disable react/react-in-jsx-scope */
-
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import './globals.scss';
-import styles from '@/app/global.module.scss';
 const studioPro = localFont({
 	src: [
 		{

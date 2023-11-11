@@ -1,7 +1,4 @@
 
-/* eslint-disable @typescript-eslint/indent */
-
-/* eslint-disable react/react-in-jsx-scope */
 'use client';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
@@ -27,13 +24,13 @@ const Navigation = ({navLinks}: Props): JSX.Element => {
 
 				return (
 					<div key={link.id} className={styles.block}>
-					<Image className={styles.ico} src={link.icon} alt='icon'/>
-					<Link
-						href={link.href}
-						className={isActive ? 'active' : ''}>
-						{link.label}
-					</Link>
-				</div>
+						<Image className={styles.ico} src={link.icon} alt='icon'/>
+						<Link
+							href={link.href}
+							className={isActive ? 'active' : ''}>
+							{link.label}
+						</Link>
+					</div>
 				);
 			})}
 		</>

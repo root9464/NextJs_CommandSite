@@ -1,5 +1,4 @@
-
-/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import Link from 'next/link';
 import styles from '@/app/global.module.scss';

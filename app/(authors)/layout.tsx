@@ -1,9 +1,6 @@
 
-/* eslint-disable react/react-in-jsx-scope */
-
 import type {Metadata} from 'next';
 import {HeaderA} from '@/components/pages/HomeAuthors/HeaderA';
-import styles from '@/app/global.module.scss';
 
 export const metadata: Metadata = {
 	title: 'Next | Nome page',

@@ -1,6 +1,6 @@
 
 'use client';
-import React, {FC} from 'react';
+import React from 'react';
 import {motion} from 'framer-motion';
 import styles from '@/app/global.module.scss';
 export type Props = {

@@ -1,6 +1,4 @@
-/* eslint-disable arrow-body-style */
 
-/* eslint-disable react/react-in-jsx-scope */
 import styles from '@/app/global.module.scss';
 import Image from 'next/image';
 import blures from '@/assets/img/blures.png';
