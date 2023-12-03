@@ -1,6 +1,4 @@
 
-/* eslint-disable react/react-in-jsx-scope */
-
 import styles from '@/app/global.module.scss';
 import {Relevance} from '@/components/pages/HomeAuthors/Relevance';
 import {BlockInvite} from '@/components/pages/HomeAuthors/BlockInvite';

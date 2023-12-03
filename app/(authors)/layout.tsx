@@ -14,11 +14,9 @@ export default function AuthorsLayout({
 	return (
 		<>
 			<HeaderA/>
-			<main>
 
-				{children}
+			{children}
 
-			</main>
 		</>
 
 	);

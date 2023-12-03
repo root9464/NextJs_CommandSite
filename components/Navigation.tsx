@@ -4,13 +4,7 @@ import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import Image from 'next/image';
 import styles from '@/app/global.module.scss';
-
-export type NavLink = {
-	icon: string;
-	label: string;
-	href: string;
-	id: number;
-};
+import {NavLink} from '@/types/propses';
 type Props = {
 	navLinks: NavLink[];
 };

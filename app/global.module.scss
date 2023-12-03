@@ -43,7 +43,13 @@ $margin: 150px;
     }
 
 }
-
+@mixin Blockes{
+    position: absolute;
+    top: 101vh;
+    z-index: 10;
+    padding-top: 70px;
+    width: 100%;
+}
 
 
 .header{
@@ -128,7 +134,7 @@ $margin: 150px;
 }
 
 .block1{
-    @include blockes(false);
+    @include Blockes;
     position: relative;
     .div{
         display: flex;
@@ -159,7 +165,7 @@ $margin: 150px;
     }
 }
 .block2{
-    @include blockes(false);
+    @include Blockes;
     position: absolute;
 
     .div2{
@@ -209,10 +215,9 @@ $margin: 150px;
 }
 
 .block3{ //трекер 
-    background-color: rgba(255, 0, 0, 0.274);
-    position: relative;
-    @include blockes(true);
+    // background-color: rgba(255, 0, 0, 0.274);
     display: grid;
+    @include Blockes;
     grid-template-columns: repeat(2, 1fr);
     gap: calc(428px - $margin *2);
     // height: 2040px;
@@ -253,9 +258,9 @@ $margin: 150px;
 }
 
 .block4{
+    // background-color: red;
     $border:50px;
-    position: relative;
-    @include blockes(true);
+    @include Blockes;
     display: flex;
     justify-content: center;
     .h{
@@ -271,7 +276,6 @@ $margin: 150px;
         height: $margin;
     }
     .pos2{
-        position: absolute;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         left: 29px;
@@ -296,6 +300,7 @@ $margin: 150px;
     }
     .pos{
         width: 100%;
+        margin-top: 200px;
         // display: flex;
         // justify-content: center;
         // align-items: center;
@@ -305,16 +310,20 @@ $margin: 150px;
         background-color: $color-bcui;
         display: flex;
         flex-direction: column;
+        z-index: 10;
         align-items: center;
         justify-content: center;
-        position: absolute;
+        position: relative;
+        margin-left: 278px;
         min-height: calc(401px /0.64 - 5.5625px);
         border-radius: $border;
-        top: calc(70px + $margin + 45px *2 + 98vh);
+        margin-bottom: 100px;
+        // top: calc(70px + $margin + 45px *2 + 98vh);
         //width: 100%; 1855
         max-width: calc(100% *0.7);
         padding: 30px 40px 20px 40px ;
         .posbuttons{
+            z-index: 10;
             padding: 20px 30px 10px 0px;
             display: flex;
             flex-direction: row;
@@ -324,6 +333,7 @@ $margin: 150px;
             height: 100px;
         }
     }
+    
 }
 .btn{
     display: flex;
@@ -344,10 +354,12 @@ $margin: 150px;
 }
 .blures3{
     position: absolute;
-    top: 10vh;
-    left: 740px;
-    width: 1886.72px;
-    height: 1486.52px;
+    top: 0vh;
+    
+    left: 850px;
+    width: 2296.72px;
+    height: 1886.52px;
+
     z-index: 1;
 }
 
@@ -379,4 +391,11 @@ $margin: 150px;
         height: calc(100% - $margin *2 + 165px - 50px);
         border-radius: 20px;
     }
+}
+
+.textes{
+    display: flex;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
 }

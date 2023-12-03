@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import Link from 'next/link';
 import styles from '@/app/global.module.scss';
+import {AuthorProps} from '@/types/propses';
 
-const Author = ({props}: any) => {
+export const Author = async (props: AuthorProps) => {
 	const url = `/authorshome/member${props.id}`;
 	return (
 		<div className={styles.bcauthor}>
@@ -15,4 +15,3 @@ const Author = ({props}: any) => {
 	);
 };
 
-export {Author};

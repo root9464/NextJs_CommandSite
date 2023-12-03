@@ -1,20 +1,23 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 'use client';
 import styles from '@/app/global.module.scss';
 import {useState} from 'react';
-import type {author} from '@/components/pages/AuthorsPages/AuthorPage';
+import type {User} from '@/types/propses';
 import {motion} from 'framer-motion';
 const Relevance = () => {
-	const [userRelevance, setUserRelevance] = useState<author[]>([
+	const [userRelevance, setUserRelevance] = useState<User[]>([
 		{name: 'User name and surname', text: 'biography user', id: 1},
 		{name: 'User name and surname', text: 'biography userbiography userbiography userbiography userbiography user', id: 2},
+		{name: 'User name and surname', text: 'biography userbiography userbiography userbiography userbiography user', id: 3},
+		{name: 'User name and surname', text: 'biography userbiography userbiography userbiography userbiography user', id: 4},
 		/* Максимум 4 страницы иначе стили ебнуться нах */
 	]);
+
 	return (
 		<>
-			{userRelevance.map((user: any, id: number) => {
+			{userRelevance.map((user, id: number) => {
 				// Console.log(user);
 				return (
 					<motion.div className={styles.requirements} key={id}

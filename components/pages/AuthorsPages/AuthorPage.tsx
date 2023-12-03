@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 'use client';
@@ -7,27 +7,23 @@ import Image from 'next/image';
 import Background from '@/assets/img/backgrounds/Authors.jpeg';
 import {Author} from './Author';
 import {useState} from 'react';
-export type author = {
-	id: number;
-	stack?: string;
-	name?: string;
-	text?: string;
-};
+import {AuthorProps} from '@/types/propses';
+
 const AuthorPage = (): JSX.Element => {
-	const [authors, setAuthors] = useState<author[]>([
-		{stack: 'FULLSTACK DEVOLOPER', id: 1},
-		{stack: 'FULLSTACK DEVOLOPER', id: 2},
-		{stack: 'FULLSTACK DEVOLOPER', id: 3},
+	const [authors, setAuthors] = useState<AuthorProps[]>([
+		{stack: 'fullstack devoloper', id: 1},
+		{stack: 'backend devoloper', id: 2},
+		{stack: 'web designer', id: 3},
 	]);
 
 	return (
 		<>
 			<Image className={styles.bcimage} src={Background} alt='f'/>
 			<div className={styles.block3}>
-				{authors.map((item: any, id: number) => {
+				{authors.map((item, id: number) => {
 					// Console.log(id);
 					return (
-						<Author props={item} key={id}/>
+						<Author {...item} key={id}/>
 					);
 				})}
 			</div>

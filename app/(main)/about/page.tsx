@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 	title: 'About | Next app',
 };
 
-export default function About() {
+export default async function About() {
 	return (
 		<section className={styles.main}>
 			<AboutPage/>

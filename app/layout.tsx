@@ -27,9 +27,8 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={studioPro.variable}>
 
-				<main>
-					{children}
-				</main>
+				{children}
+
 			</body>
 		</html>
 	);
